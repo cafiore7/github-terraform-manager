@@ -1,3 +1,8 @@
+variable "token" {
+  type      = string
+  sensitive = true
+}
+
 locals {
   # ====================================
   all_repos = merge(local.repositories)
@@ -41,8 +46,8 @@ locals {
       name                      = "example_team_2"
       description               = "create your second team here"
       privacy                   = "secret"
-      parent_team_id            = github_team.all_teams["example_team_1"].id # confirm you don't have any circular dependencies
-      create_default_maintainer = false                                      # set true if you want the creating user to be the default maintainer
+      parent_team_id            = null
+      create_default_maintainer = false
     }
   }
 }
