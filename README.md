@@ -29,5 +29,5 @@ Terraform Plan/Apply
 
 ## Additional Documentation and Acknowledgments
 
-* I will primarily be folowing the Terraform style guide of a previous co-worker found (here)(https://github.com/jonbrouse/terraform-style-guide) 
+* I will primarily be folowing the Terraform style guide of a previous co-worker found [here](https://github.com/jonbrouse/terraform-style-guide) 
 
