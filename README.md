@@ -30,5 +30,5 @@ You will need to generate you own key in Github to add as your ```var.token```. 
 
 ## Additional Documentation and Acknowledgments
 
-* I will primarily be folowing the Terraform style guide of my former co-worker found [here](https://github.com/jonbrouse/terraform-style-guide) 
+* Primarily follows the Terraform style guide of a former co-worker found [here](https://github.com/jonbrouse/terraform-style-guide) 
 
