@@ -10,6 +10,7 @@ resource "github_repository" "all_repos" {
   allow_auto_merge       = lookup(each.value, "allow_auto_merge", false)       # set to true to allow auto-merging pull requests on the repository.
   delete_branch_on_merge = lookup(each.value, "delete_branch_on_merge", false) # automatically delete head branch after a pull request is merged. Defaults to false.
   allow_update_branch    = lookup(each.value, "allow_update_branch", true)     # set to true to always suggest updating pull request branches.
+  has_projects           = lookup(each.value, "has_projects", true)            # set to true to enable the GitHub Projects features on the repository
 }
 
 resource "github_branch_default" "all_repos_default_branch" {

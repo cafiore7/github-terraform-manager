@@ -13,23 +13,22 @@ locals {
       description    = "Include a description"
       visibility     = "public"
       default_branch = "main"
+      has_projects   = true
       template = {
         owner                = "github"
         repository           = "example_repo_1"
         include_all_branches = true
       }
     }
+  }
+  # ====================================
+  all_projects = merge(local.projects)
 
-    example_repo_2 = {
-      name           = "example_repo_2"
-      description    = "Include a description"
-      visibility     = "public"
-      default_branch = "main"
-      template = {
-        owner                = "github"
-        repository           = "example_repo_2"
-        include_all_branches = true
-      }
+  projects = {
+    example_repo1_project1 = {
+      name = "example_repo1_project1"
+      repository = "${github_repository.all_repos["example_repo_1"].name}"
+      body = "This is a repository project."
     }
   }
   # ====================================
